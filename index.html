@@ -1,28 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<!-- <html lang="en"> -->
+<html ng-app="myFirstApp">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Single Web Page Application with Angular</title>
-    <style> 
+    <!-- <title>Single Web Page Application with Angular</title> -->
+   <title>My First AngularJS App</title>
+   <style> 
         body{
             font-size: 1.5em;
             background-color: antiquewhite;
         }
     </style>
-    <script src="app.js"></script>
+    <!-- <script src="app.js"></script> -->
+    <script src="angular.min.js"></script>
 </head>
 <body>
     <!-- <h1>Hello- Single Web Page Application with Angular</h1>
     <p>Hello World .....!</p> -->
-    <h1>Low Cohesion and Tight Coupling</h1>
-    <div id="nameCalculatorApp">
+    <!-- <h1>Low Cohesion and Tight Coupling</h1> -->
+    <!-- <div id="nameCalculatorApp">
         <div>
         <h2>Name Calculator</h2>
             <label for="name">Enter your name:</label>
             <input type="text" id="name" name="name" required>
         </div>
         <div id="output"></div>
+    </div> -->
+
+    <h1>My First AngularJS App</h1>
+    <div ng-controller="myFirstController">
+        <label for="name">Enter your name:</label>
+        <input type="text" id="name" ng-model="name">
+        Inside my input is: {{name}}
     </div>
 </body>
 </html>
